@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './register.css';
 
-function RegistrationForm() {
+function RegistrationForm({ setShowLogin, setShowRegister }) {
     const [formData, setFormData] = useState({
         fullName: '',
         email: '',
@@ -92,7 +92,11 @@ function RegistrationForm() {
                 </form>
 
                 <p className="login-link">
-                    Already have an account? <a href="#">Log in</a>
+                    Already have an account? <a href="#" onClick={(e) => {
+                        e.preventDefault();
+                        setShowRegister(false);
+                        setShowLogin(true);
+                    }}>Log in</a>
                 </p>
             </div>
         </div>

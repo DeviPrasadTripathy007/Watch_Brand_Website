@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import './App.css';
 import RegistrationForm from './register.jsx';
+import LoginForm from './login.jsx';
 
 function App() {
   const [showRegister, setShowRegister] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
 
   if (showRegister) {
     return (
@@ -14,7 +16,21 @@ function App() {
         >
           Back
         </button>
-        <RegistrationForm />
+        <RegistrationForm setShowLogin={setShowLogin} setShowRegister={setShowRegister} />
+      </div>
+    );
+  }
+
+  if (showLogin) {
+    return (
+      <div>
+        <button
+          onClick={() => setShowLogin(false)}
+          style={{ position: 'absolute', top: '20px', left: '20px', zIndex: 1000, padding: '10px' }}
+        >
+          Back
+        </button>
+        <LoginForm setShowRegister={setShowRegister} setShowLogin={setShowLogin} />
       </div>
     );
   }
