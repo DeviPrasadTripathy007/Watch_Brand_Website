@@ -49,7 +49,7 @@ function LoginForm({ setShowRegister, setShowLogin }) {
                             name="password"
                             value={formData.password}
                             onChange={handleChange}
-                            placeholder="••••••••"
+                            placeholder="********"
                             required
                         />
                     </div>
