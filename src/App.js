@@ -1,6 +1,24 @@
+import { useState } from 'react';
 import './App.css';
+import RegistrationForm from './register.jsx';
 
 function App() {
+  const [showRegister, setShowRegister] = useState(false);
+
+  if (showRegister) {
+    return (
+      <div>
+        <button
+          onClick={() => setShowRegister(false)}
+          style={{ position: 'absolute', top: '20px', left: '20px', zIndex: 1000, padding: '10px' }}
+        >
+          Back
+        </button>
+        <RegistrationForm />
+      </div>
+    );
+  }
+
   return (
     <div className="App">
       <header>
@@ -15,7 +33,7 @@ function App() {
           </nav>
 
           <div className="nav-icons">
-            🔍 👤 🛒
+            🔍 <span onClick={() => setShowRegister(true)} style={{ cursor: 'pointer' }}>👤</span> 🛒
           </div>
         </div>
       </header>
