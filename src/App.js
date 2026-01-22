@@ -2,10 +2,14 @@ import { useState } from 'react';
 import './App.css';
 import RegistrationForm from './register.jsx';
 import LoginForm from './login.jsx';
+import CollectionPage from './collection.jsx';
+import SlidingDashboard from './SlidingDashboard.jsx';
 
 function App() {
   const [showRegister, setShowRegister] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
+  const [showCollection, setShowCollection] = useState(false);
+  const [dashboardOpen, setDashboardOpen] = useState(false);
 
   if (showRegister) {
     return (
@@ -35,10 +39,42 @@ function App() {
     );
   }
 
+  if (showCollection) {
+    return (
+      <div>
+        <button
+          onClick={() => setShowCollection(false)}
+          style={{ position: 'absolute', top: '20px', left: '20px', zIndex: 1000, padding: '10px' }}
+        >
+          Back
+        </button>
+        <CollectionPage />
+      </div>
+    );
+  }
+
   return (
     <div className="App">
+      <SlidingDashboard 
+        isOpen={dashboardOpen} 
+        toggleDashboard={() => setDashboardOpen(!dashboardOpen)}
+        onCollectionSelect={(collection) => {
+          console.log('Selected collection:', collection);
+          setShowCollection(true);
+        }}
+      />
+
       <header>
         <div className="nav">
+          <button 
+            className={`hamburger-btn ${dashboardOpen ? 'active' : ''}`}
+            onClick={() => setDashboardOpen(!dashboardOpen)}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
           <div className="logo">CHRONOS</div>
 
           <nav className="nav-links">
@@ -62,7 +98,7 @@ function App() {
             CHRONOS represents the pinnacle of watchmaking craftsmanship,
             merging traditional techniques with modern aesthetics.
           </p>
-          <a href="#" className="btn">DISCOVER COLLECTION</a>
+          <button onClick={() => setShowCollection(true)} className="btn">DISCOVER COLLECTION</button>
         </div>
       </section>
 
