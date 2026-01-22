@@ -95,7 +95,7 @@ header {
   font-weight: 400;
   margin: 0 0 24px;
   line-height: 1.1;
-  color: aliceblue;
+  color: rgb(255, 245, 240);
 }
 
 .hero p {
@@ -136,6 +136,8 @@ header {
   max-width: 1440px;
   margin: 0 auto;
   padding: 100px 48px;
+  background: #000000;
+  color: white;
 }
 
 .section-header {
@@ -165,7 +167,7 @@ header {
 }
 
 .card {
-  background: rgb(255, 255, 255);
+  background: rgb(203, 158, 69);
   transition: transform 0.4s ease;
 }
 
