@@ -9,22 +9,52 @@ function RegistrationForm({ setShowLogin, setShowRegister }) {
         confirmPassword: ''
     });
 
+    const [errors, setErrors] = useState({});
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{8,}$/;
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData(prevState => ({
             ...prevState,
             [name]: value
         }));
+        if (errors[name]) {
+            setErrors(prev => ({ ...prev, [name]: '' }));
+        }
+    };
+
+    const validateForm = () => {
+        let newErrors = {};
+        let isValid = true;
+
+        if (!emailRegex.test(formData.email)) {
+            newErrors.email = "Invalid email format";
+            isValid = false;
+        }
+
+        if (!passwordRegex.test(formData.password)) {
+            newErrors.password = "Password must be at least 8 characters, include a letter and a number";
+            isValid = false;
+        }
+
+        if (formData.password !== formData.confirmPassword) {
+            newErrors.confirmPassword = "Passwords don't match!";
+            isValid = false;
+        }
+
+        setErrors(newErrors);
+        return isValid;
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (formData.password !== formData.confirmPassword) {
-            alert("Passwords don't match!");
-            return;
+
+        if (validateForm()) {
+            console.log('Form submitted:', formData);
+            alert('Registration Successful!');
         }
-        console.log('Form submitted:', formData);
-        alert('Registration Successful!');
     };
 
     return (
@@ -58,6 +88,7 @@ function RegistrationForm({ setShowLogin, setShowRegister }) {
                             placeholder="aditya@example.com"
                             required
                         />
+                        {errors.email && <span className="error-text" style={{ color: 'red', fontSize: '12px' }}>{errors.email}</span>}
                     </div>
 
                     <div className="form-group">
@@ -71,6 +102,7 @@ function RegistrationForm({ setShowLogin, setShowRegister }) {
                             placeholder="••••••••"
                             required
                         />
+                        {errors.password && <span className="error-text" style={{ color: 'red', fontSize: '12px' }}>{errors.password}</span>}
                     </div>
 
                     <div className="form-group">
@@ -84,6 +116,7 @@ function RegistrationForm({ setShowLogin, setShowRegister }) {
                             placeholder="••••••••"
                             required
                         />
+                        {errors.confirmPassword && <span className="error-text" style={{ color: 'red', fontSize: '12px' }}>{errors.confirmPassword}</span>}
                     </div>
 
                     <button type="submit" className="submit-btn-primary">
@@ -92,11 +125,11 @@ function RegistrationForm({ setShowLogin, setShowRegister }) {
                 </form>
 
                 <p className="login-link">
-                    Already have an account? <a href="#" onClick={(e) => {
+                    Already have an account? <button type="button" className="link-button" onClick={(e) => {
                         e.preventDefault();
                         setShowRegister(false);
                         setShowLogin(true);
-                    }}>Log in</a>
+                    }}>Log in</button>
                 </p>
             </div>
         </div>

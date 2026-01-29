@@ -60,11 +60,11 @@ function LoginForm({ setShowRegister, setShowLogin }) {
                 </form>
 
                 <p className="register-link">
-                    Don't have an account? <a href="#" onClick={(e) => {
+                    Don't have an account? <button type="button" className="link-button" onClick={(e) => {
                         e.preventDefault();
                         setShowLogin(false);
                         setShowRegister(true);
-                    }}>Sign up</a>
+                    }}>Sign up</button>
                 </p>
             </div>
         </div>
