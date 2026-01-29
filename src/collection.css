@@ -13,7 +13,7 @@
 
 .collection-header h1 {
   font-size: 48px;
-  color: white;
+  color: rgb(175, 110, 110);
   margin: 0 0 15px 0;
   font-weight: 700;
 }
@@ -44,7 +44,7 @@
 .collection-item:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(228, 80, 0, 0.3);
-  border-color: #e45000;
+  border-color: #993506;
 }
 
 .item-image {
@@ -93,7 +93,7 @@
 
 .price {
   font-size: 18px;
-  color: #e45000;
+  color: #993804;
   font-weight: 600;
 }
 
@@ -110,7 +110,7 @@
 }
 
 .view-btn:hover {
-  background: #e45000;
+  background: #8d3302;
 }
 
 .view-btn:active {
