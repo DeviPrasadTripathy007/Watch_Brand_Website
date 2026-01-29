@@ -4,11 +4,13 @@ import RegistrationForm from './register.jsx';
 import LoginForm from './login.jsx';
 import CollectionPage from './collection.jsx';
 import SlidingDashboard from './SlidingDashboard.jsx';
+import ContactPage from './contact.jsx';
 
 function App() {
   const [showRegister, setShowRegister] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
   const [showCollection, setShowCollection] = useState(false);
+  const [showContact, setShowContact] = useState(false);
   const [dashboardOpen, setDashboardOpen] = useState(false);
 
   if (showRegister) {
@@ -53,10 +55,24 @@ function App() {
     );
   }
 
+  if (showContact) {
+    return (
+      <div>
+        <button
+          onClick={() => setShowContact(false)}
+          style={{ position: 'absolute', top: '20px', left: '20px', zIndex: 1000, padding: '10px', background: '#e45000', color: 'white', border: 'none', cursor: 'pointer' }}
+        >
+          Back
+        </button>
+        <ContactPage />
+      </div>
+    );
+  }
+
   return (
     <div className="App">
-      <SlidingDashboard 
-        isOpen={dashboardOpen} 
+      <SlidingDashboard
+        isOpen={dashboardOpen}
         toggleDashboard={() => setDashboardOpen(!dashboardOpen)}
         onCollectionSelect={(collection) => {
           console.log('Selected collection:', collection);
@@ -66,7 +82,7 @@ function App() {
 
       <header>
         <div className="nav">
-          <button 
+          <button
             className={`hamburger-btn ${dashboardOpen ? 'active' : ''}`}
             onClick={() => setDashboardOpen(!dashboardOpen)}
           >
@@ -81,7 +97,7 @@ function App() {
             <a href="#">PRODUCTS</a>
             <a href="#">STORE</a>
             <a href="#">ABOUT</a>
-            <a href="#">SUPPORT</a>
+            <a href="#" onClick={(e) => { e.preventDefault(); setShowContact(true); }}>CONTACT</a>
           </nav>
 
           <div className="nav-icons">
@@ -152,11 +168,11 @@ function App() {
           </div>
 
           <div>
-            <h4>Support</h4>
+            <h4 onClick={() => setShowContact(true)} style={{ cursor: 'pointer' }}>Support</h4>
             <ul>
-              <li>FAQs</li>
-              <li>Service Centers</li>
-              <li>Warranty</li>
+              <li onClick={() => setShowContact(true)} style={{ cursor: 'pointer' }}>FAQs</li>
+              <li onClick={() => setShowContact(true)} style={{ cursor: 'pointer' }}>Service Centers</li>
+              <li onClick={() => setShowContact(true)} style={{ cursor: 'pointer' }}>Warranty</li>
             </ul>
           </div>
 
