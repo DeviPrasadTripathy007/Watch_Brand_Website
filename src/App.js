@@ -90,7 +90,12 @@ function App() {
         </div>
       </header>
 
-      <section className="hero" style={{ backgroundColor: 'black' }}>
+      <section className="hero">
+        <video className="hero-video" autoPlay muted loop playsInline preload="auto">
+          <source src="/Luxury_Watch_Commercial_Video_Creation.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="hero-overlay"></div>
         <div className="hero-content">
           <small>THE SIGNATURE COLLECTION</small>
           <h1>Timeless Precision</h1>
