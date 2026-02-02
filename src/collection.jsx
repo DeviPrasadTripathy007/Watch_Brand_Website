@@ -1,6 +1,8 @@
+import { useNavigate } from 'react-router-dom';
 import './collection.css';
 
 function CollectionPage() {
+  const navigate = useNavigate();
   const collections = [
     {
       id: 1,
@@ -43,32 +45,40 @@ function CollectionPage() {
       image: 'https://images.unsplash.com/photo-1524678606370-a47ad25cb82a',
       description: 'Rare and exclusive pieces for collectors.',
       price: '$7,299'
-    }
+    },
   ];
 
   return (
-    <div className="collection-page-container">
-      <div className="collection-header">
-        <h1>Our Collections</h1>
-        <p>Discover the finest timepieces from CHRONOS</p>
-      </div>
+    <div>
+      <button
+        onClick={() => navigate('/')}
+        style={{ position: 'absolute', top: '20px', left: '20px', zIndex: 1000, padding: '10px' }}
+      >
+        Back
+      </button>
+      <div className="collection-page-container">
+        <div className="collection-header">
+          <h1>Our Collections</h1>
+          <p>Discover the finest timepieces from CHRONOS</p>
+        </div>
 
-      <div className="collection-items">
-        {collections.map((item) => (
-          <div key={item.id} className="collection-item">
-            <div className="item-image">
-              <img src={item.image} alt={item.name} />
-            </div>
-            <div className="item-content">
-              <h3>{item.name}</h3>
-              <p>{item.description}</p>
-              <div className="item-footer">
-                <span className="price">{item.price}</span>
-                <button className="view-btn">View Details</button>
+        <div className="collection-items">
+          {collections.map((item) => (
+            <div key={item.id} className="collection-item">
+              <div className="item-image">
+                <img src={item.image} alt={item.name} />
+              </div>
+              <div className="item-content">
+                <h3>{item.name}</h3>
+                <p>{item.description}</p>
+                <div className="item-footer">
+                  <span className="price">{item.price}</span>
+                  <button className="view-btn">View Details</button>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

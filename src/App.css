@@ -451,3 +451,41 @@ footer li:hover {
     /* Simple hiding for mobile for now */
   }
 }
+/* Dropdown Menu */
+.nav-item {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  background-color: #000000;
+  min-width: 220px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  padding: 10px 0;
+  border-top: 2px solid #e45000;
+  animation: fadeIn 0.2s ease;
+  border-radius: 0 0 4px 4px;
+}
+
+.dropdown-item {
+  padding: 12px 20px;
+  color: #c4c4c4;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(228, 80, 0, 0.1);
+  color: #e45000;
+  padding-left: 25px;
+}
+

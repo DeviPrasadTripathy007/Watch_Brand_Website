@@ -1,0 +1,174 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './App.css';
+import SlidingDashboard from './SlidingDashboard.jsx';
+
+function Home() {
+    const navigate = useNavigate();
+    const [dashboardOpen, setDashboardOpen] = useState(false);
+    const [showProductMenu, setShowProductMenu] = useState(false);
+
+    const collections = [
+        'Classic Series',
+        'Explorer Series',
+        'Signature Series',
+        'Heritage Edition',
+        'Luxury Collection',
+        'Limited Edition'
+    ];
+
+    return (
+        <div className="App">
+            <SlidingDashboard
+                isOpen={dashboardOpen}
+                toggleDashboard={() => setDashboardOpen(!dashboardOpen)}
+                onCollectionSelect={(collection) => {
+                    console.log('Selected collection:', collection);
+                    navigate('/collections');
+                }}
+            />
+
+            <header>
+                <div className="nav">
+                    <button
+                        className={`hamburger-btn ${dashboardOpen ? 'active' : ''}`}
+                        onClick={() => setDashboardOpen(!dashboardOpen)}
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <div className="logo">CHRONOS</div>
+
+                    <nav className="nav-links">
+                        <div
+                            className="nav-item"
+                            onMouseEnter={() => setShowProductMenu(true)}
+                            onMouseLeave={() => setShowProductMenu(false)}
+                        >
+                            <a href="#" className="nav-link-item">PRODUCTS</a>
+                            {showProductMenu && (
+                                <div className="dropdown-menu">
+                                    {collections.map((collection, index) => (
+                                        <div
+                                            key={index}
+                                            className="dropdown-item"
+                                            onClick={() => {
+                                                console.log(`Navigating to ${collection}`);
+                                                setShowProductMenu(false);
+                                                navigate('/collections');
+                                            }}
+                                        >
+                                            {collection}
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                        <a href="#">STORE</a>
+                        <a href="#">ABOUT</a>
+                    </nav>
+
+                    <div className="nav-icons">
+                        🔍 <span onClick={() => navigate('/register')} style={{ cursor: 'pointer' }}>👤</span> 🛒
+                    </div>
+                </div>
+            </header>
+
+            <section className="hero">
+                <video className="hero-video" autoPlay muted loop playsInline preload="auto">
+                    <source src="/Luxury_Watch_Commercial_Video_Creation.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+                <div className="hero-overlay"></div>
+                <div className="hero-content">
+                    <small>THE SIGNATURE COLLECTION</small>
+                    <h1>Timeless Precision</h1>
+                    <p>
+                        CHRONOS represents the pinnacle of watchmaking craftsmanship,
+                        merging traditional techniques with modern aesthetics.
+                    </p>
+                    <button onClick={() => navigate('/collections')} className="btn">DISCOVER COLLECTION</button>
+                </div>
+            </section>
+
+            <section className="section">
+                <div className="section-header">
+                    <h2>Our Collections</h2>
+                    <a href="#" onClick={(e) => { e.preventDefault(); navigate('/collections'); }}>View All →</a>
+                </div>
+
+                <div className="collection-grid">
+                    <div className="card">
+                        <img src="/Watch_Png/Classic Series/Classic1.png" alt="Classic Series" />
+                        <div className="card-content">
+                            <h3>Classic Series</h3>
+                            <p>Minimal elegance crafted for everyday luxury.</p>
+                        </div>
+                    </div>
+
+                    <div className="card">
+                        <img src="/Watch_Png/Explorer Series/Screenshot 2026-02-02 092653.png" alt="Explorer Series" />
+                        <div className="card-content">
+                            <h3>Explorer Series</h3>
+                            <p>Engineered for adventure and precision.</p>
+                        </div>
+                    </div>
+
+                    <div className="card">
+                        <img src="/Watch_Png/Signature Series/klickors-moe-1CjiCJgHOOY-unsplash.jpg" alt="Signature Series" />
+                        <div className="card-content">
+                            <h3>Signature Series</h3>
+                            <p>Our most iconic timepieces.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div className="footer-grid">
+                    <div>
+                        <h4>Products</h4>
+                        <ul>
+                            <li>Collections</li>
+                            <li>New Arrivals</li>
+                            <li>Compare</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 onClick={() => navigate('/contact')} style={{ cursor: 'pointer' }}>Support</h4>
+                        <ul>
+                            <li onClick={() => navigate('/contact')} style={{ cursor: 'pointer' }}>FAQs</li>
+                            <li onClick={() => navigate('/contact')} style={{ cursor: 'pointer' }}>Service Centers</li>
+                            <li onClick={() => navigate('/contact')} style={{ cursor: 'pointer' }}>Warranty</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>Company</h4>
+                        <ul>
+                            <li>Our Story</li>
+                            <li>Sustainability</li>
+                            <li>Careers</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>Contact</h4>
+                        <ul>
+                            <li onClick={() => navigate('/contact')} style={{ cursor: 'pointer' }}>Get the latest news and updates.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="footer-bottom">
+                    © 2026 CHRONOS WATCHES. All rights reserved.
+                </div>
+            </footer>
+        </div>
+    );
+}
+
+export default Home;

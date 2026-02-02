@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './register.css';
 
-function RegistrationForm({ setShowLogin, setShowRegister }) {
+function RegistrationForm() {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         fullName: '',
         email: '',
@@ -54,83 +56,91 @@ function RegistrationForm({ setShowLogin, setShowRegister }) {
         if (validateForm()) {
             console.log('Form submitted:', formData);
             alert('Registration Successful!');
+            navigate('/login');
         }
     };
 
     return (
-        <div className="registration-container">
-            <div className="registration-card">
-                <h2 className="registration-title">Create Your Account</h2>
-                <p className="registration-subtitle">Join us tonight</p>
+        <div>
+            <button
+                onClick={() => navigate('/')}
+                style={{ position: 'absolute', top: '20px', left: '20px', zIndex: 1000, padding: '10px' }}
+            >
+                Back
+            </button>
+            <div className="registration-container">
+                <div className="registration-card">
+                    <h2 className="registration-title">Create Your Account</h2>
+                    <p className="registration-subtitle">Join us tonight</p>
 
-                <form onSubmit={handleSubmit} className="registration-form">
-                    <div className="form-group">
-                        <label htmlFor="fullName">Full Name</label>
-                        <input
-                            type="text"
-                            id="fullName"
-                            name="fullName"
-                            value={formData.fullName}
-                            onChange={handleChange}
-                            placeholder="Aditya Prasad Sahu"
-                            required
-                        />
-                    </div>
+                    <form onSubmit={handleSubmit} className="registration-form">
+                        <div className="form-group">
+                            <label htmlFor="fullName">Full Name</label>
+                            <input
+                                type="text"
+                                id="fullName"
+                                name="fullName"
+                                value={formData.fullName}
+                                onChange={handleChange}
+                                placeholder="Aditya Prasad Sahu"
+                                required
+                            />
+                        </div>
 
-                    <div className="form-group">
-                        <label htmlFor="email">Email Address</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            placeholder="aditya@example.com"
-                            required
-                        />
-                        {errors.email && <span className="error-text" style={{ color: 'red', fontSize: '12px' }}>{errors.email}</span>}
-                    </div>
+                        <div className="form-group">
+                            <label htmlFor="email">Email Address</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                placeholder="aditya@example.com"
+                                required
+                            />
+                            {errors.email && <span className="error-text" style={{ color: 'red', fontSize: '12px' }}>{errors.email}</span>}
+                        </div>
 
-                    <div className="form-group">
-                        <label htmlFor="password">Password</label>
-                        <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            value={formData.password}
-                            onChange={handleChange}
-                            placeholder="••••••••"
-                            required
-                        />
-                        {errors.password && <span className="error-text" style={{ color: 'red', fontSize: '12px' }}>{errors.password}</span>}
-                    </div>
+                        <div className="form-group">
+                            <label htmlFor="password">Password</label>
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                value={formData.password}
+                                onChange={handleChange}
+                                placeholder="••••••••"
+                                required
+                            />
+                            {errors.password && <span className="error-text" style={{ color: 'red', fontSize: '12px' }}>{errors.password}</span>}
+                        </div>
 
-                    <div className="form-group">
-                        <label htmlFor="confirmPassword">Confirm Password</label>
-                        <input
-                            type="password"
-                            id="confirmPassword"
-                            name="confirmPassword"
-                            value={formData.confirmPassword}
-                            onChange={handleChange}
-                            placeholder="••••••••"
-                            required
-                        />
-                        {errors.confirmPassword && <span className="error-text" style={{ color: 'red', fontSize: '12px' }}>{errors.confirmPassword}</span>}
-                    </div>
+                        <div className="form-group">
+                            <label htmlFor="confirmPassword">Confirm Password</label>
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                value={formData.confirmPassword}
+                                onChange={handleChange}
+                                placeholder="••••••••"
+                                required
+                            />
+                            {errors.confirmPassword && <span className="error-text" style={{ color: 'red', fontSize: '12px' }}>{errors.confirmPassword}</span>}
+                        </div>
 
-                    <button type="submit" className="submit-btn-primary">
-                        Sign Up
-                    </button>
-                </form>
+                        <button type="submit" className="submit-btn-primary">
+                            Sign Up
+                        </button>
+                    </form>
 
-                <p className="login-link">
-                    Already have an account? <button type="button" className="link-button" onClick={(e) => {
-                        e.preventDefault();
-                        setShowRegister(false);
-                        setShowLogin(true);
-                    }}>Log in</button>
-                </p>
+                    <p className="login-link">
+                        Already have an account? <button type="button" className="link-button" onClick={(e) => {
+                            e.preventDefault();
+                            navigate('/login');
+                        }}>Log in</button>
+                    </p>
+                </div>
             </div>
         </div>
     );
