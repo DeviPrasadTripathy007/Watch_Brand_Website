@@ -6,8 +6,6 @@ function SlidingDashboard({ isOpen, toggleDashboard, onCollectionSelect }) {
     { id: 4, name: 'Heritage Edition', icon: '📜' },
     { id: 5, name: 'Luxury Collection', icon: '✨' },
     { id: 6, name: 'Limited Edition', icon: '🎯' },
-    { id: 7, name: 'Sports Line', icon: '⚡' },
-    { id: 8, name: 'Vintage Classics', icon: '🕰️' },
   ];
 
   return (

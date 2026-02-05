@@ -92,7 +92,6 @@ function Home() {
                     <button onClick={() => navigate('/collections')} className="btn">DISCOVER COLLECTION</button>
                 </div>
             </section>
-
             <section className="section">
                 <div className="section-header">
                     <h2>Our Collections</h2>
