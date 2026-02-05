@@ -7,42 +7,42 @@ function CollectionPage() {
     {
       id: 1,
       name: 'Classic Series',
-      image: 'https://images.unsplash.com/photo-1518544801976-3e159e50e5bb',
+      image: '/Watch_Png/Classic Series/Classic1.png',
       description: 'Minimal elegance crafted for everyday luxury.',
       price: '$2,499'
     },
     {
       id: 2,
       name: 'Explorer Series',
-      image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf',
+      image: '/Watch_Png/Explorer Series/Explorer1.png',
       description: 'Engineered for adventure and precision.',
       price: '$3,299'
     },
     {
       id: 3,
       name: 'Signature Series',
-      image: 'https://images.unsplash.com/photo-1519744792095-2f2205e87b6f',
+      image: '/Watch_Png/Signature Series/Signature2.png',
       description: 'Our most iconic timepieces.',
       price: '$4,499'
     },
     {
       id: 4,
       name: 'Heritage Edition',
-      image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49',
+      image: '/Watch_Png/Heritage Series/Heritage1.png',
       description: 'Vintage inspired designs with modern craftsmanship.',
       price: '$2,899'
     },
     {
       id: 5,
       name: 'Luxury Collection',
-      image: 'https://images.unsplash.com/photo-1459680559556-e37a7f3d7a0b',
+      image: '/Watch_Png/Luxury Series/Luxury1.png',
       description: 'Premium materials and exclusive designs.',
       price: '$5,999'
     },
     {
       id: 6,
       name: 'Limited Edition',
-      image: 'https://images.unsplash.com/photo-1524678606370-a47ad25cb82a',
+      image: '/Watch_Png/Limited Series/Limited3.png',
       description: 'Rare and exclusive pieces for collectors.',
       price: '$7,299'
     },
