@@ -109,7 +109,7 @@ function Home() {
                     </div>
 
                     <div className="card">
-                        <img src="/Watch_Png/Explorer Series/Screenshot 2026-02-02 092653.png" alt="Explorer Series" />
+                        <img src="/Watch_Png/Explorer Series/Explorer1.png" alt="Explorer Series" />
                         <div className="card-content">
                             <h3>Explorer Series</h3>
                             <p>Engineered for adventure and precision.</p>
@@ -117,7 +117,7 @@ function Home() {
                     </div>
 
                     <div className="card">
-                        <img src="/Watch_Png/Signature Series/klickors-moe-1CjiCJgHOOY-unsplash.jpg" alt="Signature Series" />
+                        <img src="/Watch_Png/Signature Series/Signature2.png" alt="Signature Series" />
                         <div className="card-content">
                             <h3>Signature Series</h3>
                             <p>Our most iconic timepieces.</p>
