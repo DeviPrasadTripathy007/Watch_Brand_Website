@@ -5,12 +5,12 @@ function ClassicSeries() {
   const navigate = useNavigate();
   
   const watches = [
-    { id: 1, name: 'Classic Minimalist', image: '' },
-    { id: 2, name: 'Classic Elegant', image: '' },
-    { id: 3, name: 'Classic Refined', image: '' },
-    { id: 4, name: 'Classic Heritage', image: '' },
-    { id: 5, name: 'Classic Timeless', image: '' },
-    { id: 6, name: 'Classic Sophisticated', image: '' },
+    { id: 1, name: 'Classic Minimalist', image: '/Watch_Png/Classic Series/Classic1.png' },
+    { id: 2, name: 'Classic Elegant', image: '/Watch_Png/Classic Series/Classic2.png' },
+    { id: 3, name: 'Classic Refined', image: '/Watch_Png/Classic Series/Classic3.png' },
+    { id: 4, name: 'Classic Heritage', image: '/Watch_Png/Classic Series/Classic4.png' },
+    { id: 5, name: 'Classic Timeless', image: '/Watch_Png/Classic Series/Classic5.png' },
+    { id: 6, name: 'Classic Sophisticated', image: '/Watch_Png/Classic Series/Classic6.png' },
   ];
 
   return (

@@ -5,12 +5,12 @@ function ExplorerSeries() {
   const navigate = useNavigate();
   
   const watches = [
-    { id: 1, name: 'Explorer Adventurer', image: '' },
-    { id: 2, name: 'Explorer Navigator', image: '' },
-    { id: 3, name: 'Explorer Trail', image: '' },
-    { id: 4, name: 'Explorer Compass', image: '' },
-    { id: 5, name: 'Explorer Summit', image: '' },
-    { id: 6, name: 'Explorer Expedition', image: '' },
+    { id: 1, name: 'Explorer Adventurer', image: '/Watch_Png/Explorer Series/Explorer1.png' },
+    { id: 2, name: 'Explorer Navigator', image: '/Watch_Png/Explorer Series/Explorer2.png' },
+    { id: 3, name: 'Explorer Trail', image: '/Watch_Png/Explorer Series/Explorer3.png' },
+    { id: 4, name: 'Explorer Compass', image: '/Watch_Png/Explorer Series/Explorer4.png' },
+    { id: 5, name: 'Explorer Summit', image: '/Watch_Png/Explorer Series/Explorer5.png' },
+    { id: 6, name: 'Explorer Expedition', image: '/Watch_Png/Explorer Series/Explorer6.png' },
   ];
 
   return (

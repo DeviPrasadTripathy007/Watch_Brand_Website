@@ -5,12 +5,12 @@ function LimitedSeries() {
   const navigate = useNavigate();
   
   const watches = [
-    { id: 1, name: 'Limited Rare', image: '' },
-    { id: 2, name: 'Limited Exclusive', image: '' },
-    { id: 3, name: 'Limited Collector', image: '' },
-    { id: 4, name: 'Limited Edition', image: '' },
-    { id: 5, name: 'Limited Premium', image: '' },
-    { id: 6, name: 'Limited Heritage', image: '' },
+    { id: 1, name: 'Limited Rare', image: '/Watch_Png/Limited Series/Limited1.png' },
+    { id: 2, name: 'Limited Exclusive', image: '/Watch_Png/Limited Series/Limited2.png' },
+    { id: 3, name: 'Limited Collector', image: '/Watch_Png/Limited Series/Limited3.png' },
+    { id: 4, name: 'Limited Edition', image: '/Watch_Png/Limited Series/Limited4.png' },
+    { id: 5, name: 'Limited Premium', image: '/Watch_Png/Limited Series/Limited5.png' },
+    { id: 6, name: 'Limited Heritage', image: '/Watch_Png/Limited Series/Limited6.png' },
   ];
 
   return (

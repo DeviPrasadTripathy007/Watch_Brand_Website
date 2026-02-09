@@ -5,12 +5,12 @@ function HeritageSeries() {
   const navigate = useNavigate();
   
   const watches = [
-    { id: 1, name: 'Heritage Classic', image: '' },
-    { id: 2, name: 'Heritage Vintage', image: '' },
-    { id: 3, name: 'Heritage Retro', image: '' },
-    { id: 4, name: 'Heritage Nostalgia', image: '' },
-    { id: 5, name: 'Heritage Timeless', image: '' },
-    { id: 6, name: 'Heritage Heirloom', image: '' },
+    { id: 1, name: 'Heritage Classic', image: '/Watch_Png/Heritage Series/Heritage1.png' },
+    { id: 2, name: 'Heritage Vintage', image: '/Watch_Png/Heritage Series/Heritage2.png' },
+    { id: 3, name: 'Heritage Retro', image: '/Watch_Png/Heritage Series/Heritage3.png' },
+    { id: 4, name: 'Heritage Nostalgia', image: '/Watch_Png/Heritage Series/Heritage4.png' },
+    { id: 5, name: 'Heritage Timeless', image: '/Watch_Png/Heritage Series/Heritage5.png' },
+    { id: 6, name: 'Heritage Heirloom', image: '/Watch_Png/Heritage Series/Heritage6.png' },
   ];
 
   return (
