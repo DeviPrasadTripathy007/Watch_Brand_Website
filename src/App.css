@@ -489,3 +489,152 @@ footer li:hover {
   padding-left: 25px;
 }
 
+/* Sale Section */
+.sale-section {
+  color: white;
+  padding: 0;
+  overflow: hidden;
+}
+
+.sale-background {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 20px 20px;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sale-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(45, 45, 45, 0.8) 100%);
+  z-index: 1;
+}
+
+.sale-background > * {
+  position: relative;
+  z-index: 2;
+}
+
+.sale-section .section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sale-section .section-header h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.sale-section .section-header p {
+  font-size: 14px;
+  color: #d4af37;
+}
+
+.sale-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 60px;
+  padding-top: 0;
+}
+
+.countdown-timer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.countdown-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-family: 'Courier New', monospace;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.countdown-value {
+  font-size: 48px;
+  font-weight: bold;
+  color: #d4af37;
+  line-height: 1;
+}
+
+.countdown-label {
+  font-size: 12px;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.countdown-separator {
+  font-size: 36px;
+  color: #d4af37;
+  margin: 0 10px;
+}
+
+.sale-content {
+  flex: 1;
+  text-align: left;
+}
+
+.sale-content h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.sale-content p {
+  font-size: 16px;
+  color: #d4af37;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .sale-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .sale-background {
+    min-height: 700px;
+    padding: 40px 20px;
+  }
+
+  .countdown-display {
+    flex-wrap: wrap;
+  }
+
+  .countdown-value {
+    font-size: 32px;
+  }
+
+  .countdown-separator {
+    font-size: 24px;
+  }
+
+  .sale-content {
+    text-align: center;
+  }
+
+  .sale-content h3 {
+    font-size: 22px;
+  }
+}

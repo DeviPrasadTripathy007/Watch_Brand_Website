@@ -5,12 +5,12 @@ function LuxurySeries() {
   const navigate = useNavigate();
   
   const watches = [
-    { id: 1, name: 'Luxury Premium', image: '' },
-    { id: 2, name: 'Luxury Exquisite', image: '' },
-    { id: 3, name: 'Luxury Opulent', image: '' },
-    { id: 4, name: 'Luxury Grand', image: '' },
-    { id: 5, name: 'Luxury Exclusive', image: '' },
-    { id: 6, name: 'Luxury Refined', image: '' },
+    { id: 1, name: 'Luxury Premium', image: '/Watch_Png/Luxury Series/Luxury1.png' },
+    { id: 2, name: 'Luxury Exquisite', image: '/Watch_Png/Luxury Series/Luxury2.png' },
+    { id: 3, name: 'Luxury Opulent', image: '/Watch_Png/Luxury Series/Luxury3.png' },
+    { id: 4, name: 'Luxury Grand', image: '/Watch_Png/Luxury Series/Luxury4.png' },
+    { id: 5, name: 'Luxury Exclusive', image: '/Watch_Png/Luxury Series/Luxury5.png' },
+    { id: 6, name: 'Luxury Refined', image: '/Watch_Png/Luxury Series/Luxury6.png' },
   ];
 
   return (

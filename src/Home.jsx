@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './App.css';
 import SlidingDashboard from './SlidingDashboard.jsx';
+import CountdownTimer from './CountdownTimer.jsx';
 
 function Home() {
     const navigate = useNavigate();
@@ -90,6 +91,24 @@ function Home() {
                         merging traditional techniques with modern aesthetics.
                     </p>
                     <button onClick={() => navigate('/collections')} className="btn">DISCOVER COLLECTION</button>
+                </div>
+            </section>
+            <section className="section sale-section">
+                <div className="sale-background" style={{ backgroundImage: 'url(/Watch_sales.png)' }}>
+                    <div className="section-header">
+                        <h2>Limited Time Sale</h2>
+                        <p>Exclusive offers ending soon</p>
+                    </div>
+                    <div className="sale-container">
+                        <div className="countdown-timer">
+                            <CountdownTimer />
+                        </div>
+                        <div className="sale-content">
+                            <h3>Premium Collections on Sale</h3>
+                            <p>Save up to 40% on selected timepieces</p>
+                            <button onClick={() => navigate('/collections')} className="btn">SHOP NOW</button>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section className="section">
