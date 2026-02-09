@@ -1,11 +1,11 @@
 function SlidingDashboard({ isOpen, toggleDashboard, onCollectionSelect }) {
   const collectionTypes = [
-    { id: 1, name: 'Classic Series', icon: '⌚' },
-    { id: 2, name: 'Explorer Series', icon: '🧭' },
-    { id: 3, name: 'Signature Series', icon: '👑' },
-    { id: 4, name: 'Heritage Edition', icon: '📜' },
-    { id: 5, name: 'Luxury Collection', icon: '✨' },
-    { id: 6, name: 'Limited Edition', icon: '🎯' },
+    { id: 1, name: 'Classic Series', icon: '⌚', path: '/collections/classic' },
+    { id: 2, name: 'Explorer Series', icon: '🧭', path: '/collections/explorer' },
+    { id: 3, name: 'Signature Series', icon: '👑', path: '/collections/signature' },
+    { id: 4, name: 'Heritage Edition', icon: '📜', path: '/collections/heritage' },
+    { id: 5, name: 'Luxury Collection', icon: '✨', path: '/collections/luxury' },
+    { id: 6, name: 'Limited Edition', icon: '🎯', path: '/collections/limited' },
   ];
 
   return (

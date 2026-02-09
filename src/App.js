@@ -5,6 +5,12 @@ import RegistrationForm from './register.jsx';
 import LoginForm from './login.jsx';
 import CollectionPage from './collection.jsx';
 import ContactPage from './contact.jsx';
+import ClassicSeries from './ClassicSeries.jsx';
+import ExplorerSeries from './ExplorerSeries.jsx';
+import SignatureSeries from './SignatureSeries.jsx';
+import HeritageSeries from './HeritageSeries.jsx';
+import LuxurySeries from './LuxurySeries.jsx';
+import LimitedSeries from './LimitedSeries.jsx';
 
 function App() {
   return (
@@ -13,6 +19,12 @@ function App() {
       <Route path="/register" element={<RegistrationForm />} />
       <Route path="/login" element={<LoginForm />} />
       <Route path="/collections" element={<CollectionPage />} />
+      <Route path="/collections/classic" element={<ClassicSeries />} />
+      <Route path="/collections/explorer" element={<ExplorerSeries />} />
+      <Route path="/collections/signature" element={<SignatureSeries />} />
+      <Route path="/collections/heritage" element={<HeritageSeries />} />
+      <Route path="/collections/luxury" element={<LuxurySeries />} />
+      <Route path="/collections/limited" element={<LimitedSeries />} />
       <Route path="/contact" element={<ContactPage />} />
     </Routes>
   );

@@ -9,12 +9,12 @@ function Home() {
     const [showProductMenu, setShowProductMenu] = useState(false);
 
     const collections = [
-        'Classic Series',
-        'Explorer Series',
-        'Signature Series',
-        'Heritage Edition',
-        'Luxury Collection',
-        'Limited Edition'
+        { name: 'Classic Series', path: '/collections/classic' },
+        { name: 'Explorer Series', path: '/collections/explorer' },
+        { name: 'Signature Series', path: '/collections/signature' },
+        { name: 'Heritage Edition', path: '/collections/heritage' },
+        { name: 'Luxury Collection', path: '/collections/luxury' },
+        { name: 'Limited Edition', path: '/collections/limited' }
     ];
 
     return (
@@ -24,7 +24,7 @@ function Home() {
                 toggleDashboard={() => setDashboardOpen(!dashboardOpen)}
                 onCollectionSelect={(collection) => {
                     console.log('Selected collection:', collection);
-                    navigate('/collections');
+                    navigate(collection.path);
                 }}
             />
 
@@ -55,12 +55,12 @@ function Home() {
                                             key={index}
                                             className="dropdown-item"
                                             onClick={() => {
-                                                console.log(`Navigating to ${collection}`);
+                                                console.log(`Navigating to ${collection.name}`);
                                                 setShowProductMenu(false);
-                                                navigate('/collections');
+                                                navigate(collection.path);
                                             }}
                                         >
-                                            {collection}
+                                            {collection.name}
                                         </div>
                                     ))}
                                 </div>
