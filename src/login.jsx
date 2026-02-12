@@ -64,6 +64,12 @@ function LoginForm() {
                             />
                         </div>
 
+                        <div className="forgot-password">
+                            <button type="button" className="link-button" onClick={() => alert('Password reset link sent to your email!')}>
+                                Forgot Password?
+                            </button>
+                        </div>
+
                         <button type="submit" className="submit-btn-primary">
                             Sign In
                         </button>
