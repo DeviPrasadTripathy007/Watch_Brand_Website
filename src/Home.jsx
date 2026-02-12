@@ -121,7 +121,14 @@ function Home() {
                 </div>
 
                 <div className="collection-grid">
-                    <div className="card">
+                    <div
+                        className="card"
+                        onClick={() => navigate('/collections/classic')}
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => { if (e.key === 'Enter') navigate('/collections/classic'); }}
+                        style={{ cursor: 'pointer' }}
+                    >
                         <img src="/Watch_Png/Classic Series/Classic1.png" alt="Classic Series" />
                         <div className="card-content">
                             <h3>Classic Series</h3>
@@ -129,7 +136,14 @@ function Home() {
                         </div>
                     </div>
 
-                    <div className="card">
+                    <div
+                        className="card"
+                        onClick={() => navigate('/collections/explorer')}
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => { if (e.key === 'Enter') navigate('/collections/explorer'); }}
+                        style={{ cursor: 'pointer' }}
+                    >
                         <img src="/Watch_Png/Explorer Series/Explorer1.png" alt="Explorer Series" />
                         <div className="card-content">
                             <h3>Explorer Series</h3>
@@ -137,7 +151,14 @@ function Home() {
                         </div>
                     </div>
 
-                    <div className="card">
+                    <div
+                        className="card"
+                        onClick={() => navigate('/collections/signature')}
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => { if (e.key === 'Enter') navigate('/collections/signature'); }}
+                        style={{ cursor: 'pointer' }}
+                    >
                         <img src="/Watch_Png/Signature Series/Signature2.png" alt="Signature Series" />
                         <div className="card-content">
                             <h3>Signature Series</h3>

@@ -5,12 +5,12 @@ function SignatureSeries() {
   const navigate = useNavigate();
   
   const watches = [
-    { id: 1, name: 'Signature Icon', image: '' },
-    { id: 2, name: 'Signature Crown', image: '' },
-    { id: 3, name: 'Signature Legacy', image: '' },
-    { id: 4, name: 'Signature Master', image: '' },
-    { id: 5, name: 'Signature Elite', image: '' },
-    { id: 6, name: 'Signature Prestige', image: '' },
+    { id: 1, name: 'Signature Icon', image: '/Watch_Png/Signature Series/Signature1.png' },
+    { id: 2, name: 'Signature Crown', image: '/Watch_Png/Signature Series/Signature2.png' },
+    { id: 3, name: 'Signature Legacy', image: '/Watch_Png/Signature Series/Signature3.png' },
+    { id: 4, name: 'Signature Master', image: '/Watch_Png/Signature Series/Signature4.png' },
+    { id: 5, name: 'Signature Elite', image: '/Watch_Png/Signature Series/Signature5.png' },
+    { id: 6, name: 'Signature Prestige', image: '/Watch_Png/Signature Series/Signature6.png' },
   ];
 
   return (
