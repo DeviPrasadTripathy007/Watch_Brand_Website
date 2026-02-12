@@ -1,11 +1,13 @@
+import { Watch, Compass, Crown, Landmark, Gem, Award } from 'lucide-react';
+
 function SlidingDashboard({ isOpen, toggleDashboard, onCollectionSelect }) {
   const collectionTypes = [
-    { id: 1, name: 'Classic Series', icon: '⌚', path: '/collections/classic' },
-    { id: 2, name: 'Explorer Series', icon: '🧭', path: '/collections/explorer' },
-    { id: 3, name: 'Signature Series', icon: '👑', path: '/collections/signature' },
-    { id: 4, name: 'Heritage Edition', icon: '📜', path: '/collections/heritage' },
-    { id: 5, name: 'Luxury Collection', icon: '✨', path: '/collections/luxury' },
-    { id: 6, name: 'Limited Edition', icon: '🎯', path: '/collections/limited' },
+    { id: 1, name: 'Classic Series', icon: <Watch size={20} />, path: '/collections/classic' },
+    { id: 2, name: 'Explorer Series', icon: <Compass size={20} />, path: '/collections/explorer' },
+    { id: 3, name: 'Signature Series', icon: <Crown size={20} />, path: '/collections/signature' },
+    { id: 4, name: 'Heritage Edition', icon: <Landmark size={20} />, path: '/collections/heritage' },
+    { id: 5, name: 'Luxury Collection', icon: <Gem size={20} />, path: '/collections/luxury' },
+    { id: 6, name: 'Limited Edition', icon: <Award size={20} />, path: '/collections/limited' },
   ];
 
   return (

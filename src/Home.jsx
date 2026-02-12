@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Search, User, ShoppingBag } from 'lucide-react';
 import './App.css';
 import SlidingDashboard from './SlidingDashboard.jsx';
 import CountdownTimer from './CountdownTimer.jsx';
@@ -72,7 +73,9 @@ function Home() {
                     </nav>
 
                     <div className="nav-icons">
-                        🔍 <span onClick={() => navigate('/register')} style={{ cursor: 'pointer' }}>👤</span> 🛒
+                        <Search className="icon-hover" size={20} />
+                        <User className="icon-hover" onClick={() => navigate('/register')} size={20} />
+                        <ShoppingBag className="icon-hover" size={20} />
                     </div>
                 </div>
             </header>
