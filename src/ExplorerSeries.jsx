@@ -5,12 +5,12 @@ function ExplorerSeries() {
   const navigate = useNavigate();
   
   const watches = [
-    { id: 1, name: 'Explorer Adventurer', image: '/Watch_Png/Explorer Series/Explorer1.png' },
-    { id: 2, name: 'Explorer Navigator', image: '/Watch_Png/Explorer Series/Explorer2.png' },
-    { id: 3, name: 'Explorer Trail', image: '/Watch_Png/Explorer Series/Explorer3.png' },
-    { id: 4, name: 'Explorer Compass', image: '/Watch_Png/Explorer Series/Explorer4.png' },
-    { id: 5, name: 'Explorer Summit', image: '/Watch_Png/Explorer Series/Explorer5.png' },
-    { id: 6, name: 'Explorer Expedition', image: '/Watch_Png/Explorer Series/Explorer6.png' },
+    { id: 1, name: 'Explorer Adventure', image: '/Watch_Png/Explorer Series/Explorer1.png' },
+    { id: 2, name: 'Explorer Mountaineer', image: '/Watch_Png/Explorer Series/Explorer2.png' },
+    { id: 3, name: 'Explorer Pathfinder', image: '/Watch_Png/Explorer Series/Explorer3.png' },
+    { id: 4, name: 'Explorer Summit', image: '/Watch_Png/Explorer Series/Explorer4.png' },
+    { id: 5, name: 'Explorer Nomad', image: '/Watch_Png/Explorer Series/Explorer5.png' },
+    { id: 6, name: 'Explorer Voyager', image: '/Watch_Png/Explorer Series/Explorer6.png' },
   ];
 
   return (
@@ -29,12 +29,12 @@ function ExplorerSeries() {
 
         <div className="watches-grid">
           {watches.map((watch) => (
-            <div key={watch.id} className="watch-card">
+            <div key={watch.id} className="watch-card" onClick={() => navigate(`/product/explorer/${watch.id}`)}>
               <div className="watch-image-placeholder">
                 <img src={watch.image || 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="200" height="200"%3E%3Crect fill="%23e0e0e0" width="200" height="200"/%3E%3Ctext x="50%25" y="50%25" text-anchor="middle" dy=".3em" fill="%23999" font-size="14"%3EWatch Image%3C/text%3E%3C/svg%3E'} alt={watch.name} />
               </div>
               <h3>{watch.name}</h3>
-              <button className="add-to-cart-btn">Add to Cart</button>
+              <button className="add-to-cart-btn" onClick={(e) => e.stopPropagation()}>Add to Cart</button>
             </div>
           ))}
         </div>

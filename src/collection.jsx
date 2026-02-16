@@ -78,7 +78,6 @@ function CollectionPage() {
                 <h3>{item.name}</h3>
                 <p>{item.description}</p>
                 <div className="item-footer">
-                  <span className="price">{item.price}</span>
                   <button className="view-btn" onClick={() => navigate(item.path)}>View Details</button>
                 </div>
               </div>

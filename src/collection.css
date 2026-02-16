@@ -85,16 +85,10 @@
 
 .item-footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   padding-top: 15px;
   border-top: 1px solid rgba(228, 80, 0, 0.2);
-}
-
-.price {
-  font-size: 18px;
-  color: #993804;
-  font-weight: 600;
 }
 
 .view-btn {
