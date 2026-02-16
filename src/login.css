@@ -94,6 +94,17 @@
     color: #ff6a1a;
 }
 
+.reset-success {
+    text-align: center;
+    padding: 20px 0;
+    color: #c4c4c4;
+    line-height: 1.6;
+}
+
+.reset-success strong {
+    color: #e45000;
+}
+
 .submit-btn-primary {
     width: 100%;
     padding: 14px;
