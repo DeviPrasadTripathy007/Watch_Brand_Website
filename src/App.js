@@ -11,6 +11,7 @@ import SignatureSeries from './SignatureSeries.jsx';
 import HeritageSeries from './HeritageSeries.jsx';
 import LuxurySeries from './LuxurySeries.jsx';
 import LimitedSeries from './LimitedSeries.jsx';
+import ProductDetail from './ProductDetail.jsx';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Route path="/collections/heritage" element={<HeritageSeries />} />
       <Route path="/collections/luxury" element={<LuxurySeries />} />
       <Route path="/collections/limited" element={<LimitedSeries />} />
+      <Route path="/product/:series/:productId" element={<ProductDetail />} />
       <Route path="/contact" element={<ContactPage />} />
     </Routes>
   );
