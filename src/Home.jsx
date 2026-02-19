@@ -191,9 +191,9 @@ function Home() {
                     <div>
                         <h4>Company</h4>
                         <ul>
-                            <li>Our Story</li>
-                            <li>Sustainability</li>
-                            <li>Careers</li>
+                            <li onClick={() => navigate('/our-story')} style={{ cursor: 'pointer' }}>Our Story</li>
+                            <li onClick={() => navigate('/sustainability')} style={{ cursor: 'pointer' }}>Sustainability</li>
+                            <li onClick={() => navigate('/careers')} style={{ cursor: 'pointer' }}>Careers</li>
                         </ul>
                     </div>
 

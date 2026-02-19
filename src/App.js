@@ -12,6 +12,9 @@ import HeritageSeries from './HeritageSeries.jsx';
 import LuxurySeries from './LuxurySeries.jsx';
 import LimitedSeries from './LimitedSeries.jsx';
 import ProductDetail from './ProductDetail.jsx';
+import OurStory from './OurStory.jsx';
+import Sustainability from './Sustainability.jsx';
+import Careers from './Careers.jsx';
 
 function App() {
   return (
@@ -28,6 +31,9 @@ function App() {
       <Route path="/collections/limited" element={<LimitedSeries />} />
       <Route path="/product/:series/:productId" element={<ProductDetail />} />
       <Route path="/contact" element={<ContactPage />} />
+      <Route path="/our-story" element={<OurStory />} />
+      <Route path="/sustainability" element={<Sustainability />} />
+      <Route path="/careers" element={<Careers />} />
     </Routes>
   );
 }
