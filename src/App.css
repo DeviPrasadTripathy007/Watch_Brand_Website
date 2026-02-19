@@ -43,7 +43,7 @@ header {
 
 .nav-links {
   display: flex;
-  gap: 40px;
+  gap: 60px;
   color: white
 }
 
@@ -465,9 +465,9 @@ footer li:hover {
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: -20px;
+  left: -40px;
   background-color: #000000;
-  min-width: 220px;
+  min-width: 170px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
   z-index: 1000;
   padding: 10px 0;
