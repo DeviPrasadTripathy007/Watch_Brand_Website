@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+/* ──────────────────────────────
+   Page Shell
+────────────────────────────── */
+.sc-page {
+    min-height: 100vh;
+    background: #05080f;
+    color: #e0e8f5;
+    font-family: 'Outfit', sans-serif;
+    position: relative;
+}
+
+.sc-back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    padding: 9px 18px;
+    background: #e45000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    transition: background 0.2s;
+}
+
+.sc-back-btn:hover {
+    background: #c93c00;
+}
+
+/* ──────────────────────────────
+   Hero
+────────────────────────────── */
+.sc-hero {
+    text-align: center;
+    padding: 70px 20px 30px;
+    background: linear-gradient(180deg, #0d1628 0%, #05080f 100%);
+}
+
+.sc-hero-title {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 12px;
+}
+
+.sc-hero-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #e45000;
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+.sc-hero-sub {
+    font-size: 1rem;
+    color: #7a9abf;
+    max-width: 540px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ──────────────────────────────
+   Main content layout
+────────────────────────────── */
+.sc-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 24px 60px;
+}
+
+/* ──────────────────────────────
+   SVG Map
+────────────────────────────── */
+.sc-map-wrapper {
+    position: relative;
+    margin-bottom: 50px;
+    border-radius: 16px;
+    overflow: visible;
+    box-shadow: 0 0 60px #0004, 0 0 0 1px #1e2d4e;
+}
+
+.sc-map-svg {
+    width: 100%;
+    border-radius: 16px;
+    display: block;
+    background: #0a0f1e;
+}
+
+/* Pulse animation */
+@keyframes sc-pulse {
+    0% {
+        r: 10;
+        opacity: 0.7;
+    }
+
+    100% {
+        r: 20;
+        opacity: 0;
+    }
+}
+
+.sc-pulse-outer {
+    animation: sc-pulse 1.4s ease-out infinite;
+}
+
+/* ──────────────────────────────
+   Tooltip card (overlay)
+────────────────────────────── */
+.sc-tooltip {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 280px;
+    background: linear-gradient(135deg, #0f1c35 0%, #0a1220 100%);
+    border: 1px solid #e45000;
+    border-radius: 12px;
+    padding: 18px 20px;
+    box-shadow: 0 8px 40px #0008, 0 0 20px #e4500033;
+    animation: sc-fadein 0.25s ease;
+    z-index: 10;
+}
+
+@keyframes sc-fadein {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sc-tooltip-close {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    background: none;
+    border: none;
+    color: #7a9abf;
+    font-size: 1.3rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.sc-tooltip-close:hover {
+    color: #e45000;
+}
+
+.sc-tooltip-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.sc-tooltip-flag {
+    font-size: 1.4rem;
+}
+
+.sc-tooltip-city {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+}
+
+.sc-tooltip-country {
+    font-size: 0.78rem;
+    color: #e45000;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.sc-tooltip-divider {
+    height: 1px;
+    background: #1e2d4e;
+    margin: 10px 0;
+}
+
+.sc-tooltip-info p {
+    margin: 6px 0;
+    font-size: 0.82rem;
+    color: #aab8d0;
+    display: flex;
+    gap: 6px;
+    flex-direction: column;
+}
+
+.sc-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #e45000;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: block;
+    margin-bottom: 1px;
+}
+
+.sc-tooltip-services {
+    margin-top: 12px;
+}
+
+.sc-services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 6px;
+}
+
+.sc-service-tag {
+    padding: 3px 8px;
+    border-radius: 20px;
+    background: #1a2540;
+    border: 1px solid #2d4a7a;
+    font-size: 0.72rem;
+    color: #aab8d0;
+}
+
+/* ──────────────────────────────
+   Cards Grid
+────────────────────────────── */
+.sc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.sc-card {
+    background: linear-gradient(135deg, #0f1c35 0%, #0a1220 100%);
+    border: 1px solid #1a2a48;
+    border-radius: 14px;
+    padding: 22px;
+    cursor: pointer;
+    transition: border-color 0.25s, transform 0.2s, box-shadow 0.25s;
+}
+
+.sc-card:hover {
+    border-color: #e45000;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 30px #e4500022;
+}
+
+.sc-card--active {
+    border-color: #e45000;
+    box-shadow: 0 0 0 2px #e4500055, 0 8px 30px #e4500033;
+}
+
+.sc-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.sc-card-city {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 3px;
+}
+
+.sc-card-country {
+    font-size: 0.75rem;
+    color: #e45000;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.sc-card-icon {
+    font-size: 1.4rem;
+    opacity: 0.6;
+}
+
+.sc-card-address,
+.sc-card-phone,
+.sc-card-hours {
+    font-size: 0.82rem;
+    color: #7a9abf;
+    margin: 4px 0;
+    line-height: 1.45;
+}
+
+.sc-card-phone {
+    color: #aab8d0;
+}
+
+.sc-card-hours {
+    color: #5a7a9f;
+    font-style: italic;
+}
+
+.sc-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 12px;
+}
+
+.sc-card-tag {
+    padding: 3px 9px;
+    border-radius: 20px;
+    background: #1a2540;
+    border: 1px solid #2d4a7a;
+    font-size: 0.72rem;
+    color: #aab8d0;
+}
+
+.sc-card-tag--more {
+    border-color: #e45000;
+    color: #e45000;
+}
+
+/* ──────────────────────────────
+   Responsive
+────────────────────────────── */
+@media (max-width: 600px) {
+    .sc-tooltip {
+        position: static;
+        width: 100%;
+        margin-bottom: 16px;
+        border-radius: 10px;
+    }
+
+    .sc-map-wrapper {
+        border-radius: 10px;
+    }
+
+    .sc-grid {
+        grid-template-columns: 1fr;
+    }
+}

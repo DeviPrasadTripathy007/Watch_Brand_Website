@@ -183,7 +183,7 @@ function Home() {
                         <h4 onClick={() => navigate('/contact')} style={{ cursor: 'pointer' }}>Support</h4>
                         <ul>
                             <li onClick={() => navigate('/contact')} style={{ cursor: 'pointer' }}>FAQs</li>
-                            <li onClick={() => navigate('/contact')} style={{ cursor: 'pointer' }}>Service Centers</li>
+                            <li onClick={() => navigate('/service-centers')} style={{ cursor: 'pointer' }}>Service Centers</li>
                             <li onClick={() => navigate('/contact')} style={{ cursor: 'pointer' }}>Warranty</li>
                         </ul>
                     </div>

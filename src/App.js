@@ -15,6 +15,7 @@ import ProductDetail from './ProductDetail.jsx';
 import OurStory from './OurStory.jsx';
 import Sustainability from './Sustainability.jsx';
 import Careers from './Careers.jsx';
+import ServiceCenters from './ServiceCenters.jsx';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
       <Route path="/our-story" element={<OurStory />} />
       <Route path="/sustainability" element={<Sustainability />} />
       <Route path="/careers" element={<Careers />} />
+      <Route path="/service-centers" element={<ServiceCenters />} />
     </Routes>
   );
 }
